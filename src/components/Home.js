@@ -1,13 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 function Home() {
     const navigate = useNavigate();
 
     const handleLogout = () => {
         // Aquí puedes agregar la lógica para cerrar sesión en el backend
-        toast.success('Logged out successfully');
         navigate('/login');
     };
 
