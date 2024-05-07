@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3001/api';
+const BASE_URL = 'https://backend-login-uce-d6aab1c9d120.herokuapp.com/api';
+
 
 export const registerUser = async (userData) => {
     try {
