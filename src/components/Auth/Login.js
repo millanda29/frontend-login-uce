@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { loginUser } from "../../api/authApi";
 
 function Login() {
@@ -19,11 +18,9 @@ function Login() {
         setLoading(true);
         try {
             await loginUser({ correo, clave });
-            toast.success('Login successful!');
             navigate('/home');
         } catch (error) {
-            const errorMessage = error.response?.data?.error || 'Invalid correo or clave';
-            toast.error(errorMessage);
+            console.error('Error al iniciar sesión:', error);
         } finally {
             setLoading(false);
         }
