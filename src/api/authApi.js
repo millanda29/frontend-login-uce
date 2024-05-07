@@ -20,4 +20,3 @@ export const loginUser = async (credentials) => {
         throw error.response.data.message; // Lanzar solo el mensaje de error
     }
 };
-
