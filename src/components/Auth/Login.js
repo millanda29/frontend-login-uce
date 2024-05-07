@@ -27,14 +27,18 @@ function Login() {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Login</h2>
             <form onSubmit={handleLogin}>
-                <input type="correo" placeholder="correo" value={correo} onChange={(e) => setCorreo(e.target.value)} required />
-                <input type="clave" placeholder="clave" value={clave} onChange={(e) => setClave(e.target.value)} required />
-                <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
+                <input type="correo" className="input" placeholder="correo" value={correo}
+                       onChange={(e) => setCorreo(e.target.value)} required/>
+                <input type="clave" className="input" placeholder="clave" value={clave}
+                       onChange={(e) => setClave(e.target.value)} required/>
+                <button type="submit" className="button" disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
             </form>
-            <Link to="/register">Don't have an account? Register here</Link>
+            <div className="link">
+                <Link to="/register">Don't have an account? Register here</Link>
+            </div>
         </div>
     );
 }

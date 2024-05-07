@@ -20,16 +20,22 @@ function Register() {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Register</h2>
             <form onSubmit={handleRegister}>
-                <input type="text" placeholder="First Name" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-                <input type="text" placeholder="Last Name" value={apellido} onChange={(e) => setApellido(e.target.value)} />
-                <input type="correo" placeholder="Correo" value={correo} onChange={(e) => setCorreo(e.target.value)} />
-                <input type="password" placeholder="Password" value={clave} onChange={(e) => setClave(e.target.value)} />
-                <button type="submit">Register</button>
+                <input type="text" className="input" placeholder="First Name" value={nombre}
+                       onChange={(e) => setNombre(e.target.value)}/>
+                <input type="text" className="input" placeholder="Last Name" value={apellido}
+                       onChange={(e) => setApellido(e.target.value)}/>
+                <input type="correo" className="input" placeholder="Correo" value={correo}
+                       onChange={(e) => setCorreo(e.target.value)}/>
+                <input type="password" className="input" placeholder="Password" value={clave}
+                       onChange={(e) => setClave(e.target.value)}/>
+                <button type="submit" className="button">Register</button>
             </form>
-            <Link to="/login">Already have an account? Login here</Link>
+            <div className="link">
+                <Link to="/login">Already have an account? Login here</Link>
+            </div>
         </div>
     );
 }
